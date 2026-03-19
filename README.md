@@ -1,3 +1,4 @@
+<img width="1798" height="867" alt="image" src="https://github.com/user-attachments/assets/a62fba20-7ddc-4f1e-afbf-9d346a3cbd7b" />
 # 🏥 Medicore — Healthcare Appointment Platform
 
 ## Overview
