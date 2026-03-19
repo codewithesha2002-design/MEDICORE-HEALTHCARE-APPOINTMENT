@@ -1,0 +1,73 @@
+/* Custom CSS for MediCore */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #faf9f8;
+    color: #2c3e50;
+}
+
+/* Navbar Tuning */
+.custom-navbar {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    letter-spacing: -0.5px;
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: 80vh;
+    background: linear-gradient(135deg, #e0f7fa 0%, #ffffff 100%);
+    position: relative;
+    padding-top: 80px;
+}
+
+/* Glass Card */
+.glass-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Buttons */
+.btn-primary {
+    background: linear-gradient(135deg, #0d6efd, #0b5ed7);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 15px rgba(13, 110, 253, 0.3);
+}
+
+/* Form inputs */
+.form-control, .form-select {
+    border-radius: 10px;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    transition: all 0.2s;
+}
+
+.form-control:focus, .form-select:focus {
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15);
+    border-color: #0d6efd;
+}
+
+/* Dashboard Table */
+.table-hover tbody tr:hover {
+    background-color: #f1f8ff;
+    transition: background-color 0.2s;
+}

@@ -1,0 +1,293 @@
+.container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--text-dark);
+  }
+
+  p {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    margin-top: 8px;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.noResults {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 4rem;
+  font-size: 1.2rem;
+  color: var(--text-light);
+  background: rgba(255,255,255,0.5);
+  border-radius: 20px;
+}
+
+.docCard {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -10px rgba(0,0,0,0.1);
+  }
+}
+
+.cardHeader {
+  padding: 20px;
+  display: flex;
+  gap: 16px;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--primary-color);
+  flex-shrink: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.docInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h3 {
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: var(--text-dark);
+  }
+}
+
+.specialBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  background: rgba(37, 99, 235, 0.1);
+  padding: 4px 10px;
+  border-radius: 100px;
+  width: fit-content;
+}
+
+.cardBody {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.infoRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-light);
+  font-size: 0.95rem;
+
+  svg {
+    color: var(--text-dark);
+    opacity: 0.7;
+  }
+}
+
+.cardFooter {
+  padding: 20px;
+  padding-top: 0;
+}
+
+/* Profile Specific */
+.profileLayout {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 32px;
+  align-items: start;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.profileCard {
+  padding: 3rem;
+}
+
+.profileHeaderBig {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+  }
+
+  .specTitle {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+}
+
+.bigAvatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 24px;
+  background: #e2e8f0;
+}
+
+.badgeGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  
+  @media (max-width: 600px) {
+    justify-content: center;
+  }
+
+  span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    border-radius: 100px;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+}
+
+.ratingBadge {
+  background: rgba(245, 158, 11, 0.1);
+  color: #d97706;
+}
+
+.locationBadge {
+  background: rgba(0,0,0,0.05);
+  color: var(--text-dark);
+}
+
+.aboutSection {
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  p {
+    color: var(--text-light);
+    line-height: 1.8;
+  }
+}
+
+.bookingWizard {
+  padding: 2rem;
+  position: sticky;
+  top: 100px;
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+  }
+}
+
+.wizardGroup {
+  margin-bottom: 24px;
+  
+  .label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+}
+
+.slotGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.slotBtn {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.1);
+  background: white;
+  color: var(--text-dark);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+  }
+}
+
+.slotSelected {
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+  
+  &:hover {
+    color: white;
+  }
+}
+
+.successState {
+  text-align: center;
+  padding: 2rem 0;
+
+  .successIcon {
+    color: var(--success-color);
+    margin: 0 auto 1.5rem;
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+    border: none;
+    padding: 0;
+  }
+
+  p {
+    color: var(--text-light);
+    margin-bottom: 2rem;
+  }
+}

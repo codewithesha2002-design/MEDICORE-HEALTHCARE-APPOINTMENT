@@ -1,0 +1,167 @@
+.adminLayout {
+  display: flex;
+  min-height: calc(100vh - 80px); /* Account for navbar */
+  background: rgba(255,255,255,0.4);
+}
+
+.sidebar {
+  width: 250px;
+  border-radius: 0;
+  border-right: 1px solid rgba(0,0,0,0.1);
+  border-top: none;
+  border-bottom: none;
+  padding: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+
+  button {
+    background: transparent;
+    border: none;
+    padding: 16px 24px;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-light);
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: inherit;
+
+    &:hover {
+      background: rgba(37, 99, 235, 0.05);
+      color: var(--primary-color);
+    }
+  }
+
+  .active {
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--primary-color);
+    border-right: 4px solid var(--primary-color);
+  }
+}
+
+.sidebarHeader {
+  padding: 0 24px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 24px;
+}
+
+.mainContent {
+  flex: 1;
+  padding: 3rem;
+  overflow-y: auto;
+}
+
+/* Dashboard States */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.statCard {
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  svg {
+    color: var(--primary-color);
+    width: 48px;
+    height: 48px;
+    padding: 12px;
+    background: rgba(37, 99, 235, 0.1);
+    border-radius: 12px;
+  }
+
+  h3 {
+    font-size: 0.95rem;
+    color: var(--text-light);
+  }
+
+  p {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--text-dark);
+  }
+}
+
+/* Tables */
+.tableCard {
+  padding: 24px;
+  
+  h2 {
+    margin-bottom: 24px;
+    font-size: 1.25rem;
+  }
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+
+  th, td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+  }
+
+  th {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: var(--text-light);
+    font-weight: 700;
+  }
+
+  tr:hover {
+    background: rgba(255,255,255,0.5);
+  }
+}
+
+.statusBadge {
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--success-color);
+  padding: 4px 12px;
+  border-radius: 100px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Doc Management layout */
+.docManagement {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.addDocForm {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  h2 {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+  }
+}
+
+.iconBtn {
+  background: transparent;
+  border: none;
+  color: var(--danger-color);
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  
+  &:hover {
+    background: rgba(239, 68, 68, 0.1);
+  }
+}

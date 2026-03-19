@@ -1,0 +1,123 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 24px -8px rgba(0, 0, 0, 0.05);
+  padding: 1rem 2rem;
+}
+
+.navContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--primary-dark);
+  text-decoration: none;
+  
+  .icon {
+    color: var(--primary-color);
+  }
+}
+
+.links {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+
+  .link {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: color 0.2s ease;
+    
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+
+  .danger {
+    color: var(--danger-color);
+    font-weight: 600;
+    &:hover { color: #dc2626; }
+  }
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.langSwitch {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-light);
+
+  select {
+    background: transparent;
+    border: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    outline: none;
+  }
+}
+
+.userMenu {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  .greeting {
+    font-weight: 600;
+    color: var(--text-dark);
+  }
+
+  .btnOutline {
+    padding: 6px 12px;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+
+    &:hover {
+      background: var(--primary-color);
+      color: #fff;
+    }
+  }
+}
+
+.loginBtn {
+  padding: 10px 20px;
+}
+
+@media (max-width: 768px) {
+  .links {
+    display: none; // Would normally implement a hamburger menu here
+  }
+  .actions {
+    gap: 12px;
+  }
+  .langSwitch span {
+    display: none;
+  }
+}

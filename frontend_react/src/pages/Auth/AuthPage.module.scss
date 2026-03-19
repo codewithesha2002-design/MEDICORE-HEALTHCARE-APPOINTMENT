@@ -1,0 +1,141 @@
+.authContainer {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: radial-gradient(circle at top left, rgba(37, 99, 235, 0.1), transparent 400px),
+              radial-gradient(circle at bottom right, rgba(16, 185, 129, 0.1), transparent 400px);
+}
+
+.authCard {
+  width: 100%;
+  max-width: 440px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 8px;
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    background: linear-gradient(to right, var(--primary-color), #8b5cf6);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.submitBtn {
+  margin-top: 8px;
+  width: 100%;
+  padding: 14px;
+  font-size: 1.05rem;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: var(--text-light);
+  font-size: 0.875rem;
+  margin: 8px 0;
+
+  &::before,
+  &::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  &::before {
+    margin-right: .5em;
+  }
+  &::after {
+    margin-left: .5em;
+  }
+}
+
+.socialGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  .socialBtn {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    color: var(--text-dark);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    
+    &:hover {
+      background: #fff;
+      border-color: rgba(0, 0, 0, 0.2);
+      transform: translateY(-2px);
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.footer {
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--text-light);
+  margin-top: 16px;
+
+  button {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.forgotPassword {
+  text-align: right;
+  
+  button {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

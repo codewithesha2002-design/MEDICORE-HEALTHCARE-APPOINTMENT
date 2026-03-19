@@ -1,0 +1,197 @@
+.container {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.sosBanner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 32px;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  margin-bottom: 2rem;
+  transition: all 0.5s ease;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+}
+
+.activeSOS {
+  background: rgba(239, 68, 68, 0.9);
+  color: white;
+  animation: bgPulse 2s infinite;
+
+  h1, p { color: white; }
+  .pulse { color: white; }
+  .sosButton {
+    background: white;
+    color: var(--danger-color);
+  }
+}
+
+@keyframes bgPulse {
+  0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+  70% { box-shadow: 0 0 0 20px rgba(239, 68, 68, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+}
+
+.sosInfo {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--danger-color);
+  }
+
+  p {
+    color: var(--text-light);
+    font-weight: 500;
+  }
+}
+
+.pulse {
+  color: var(--danger-color);
+  animation: pulseIcon 1.5s infinite;
+}
+
+@keyframes pulseIcon {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.7; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.sosButton {
+  background: var(--danger-color);
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 100px;
+  font-size: 1.25rem;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 10px 30px -10px rgba(239, 68, 68, 0.5);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -10px rgba(239, 68, 68, 0.6);
+  }
+}
+
+.mainGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 32px;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.mapCard {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  h2 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.5rem;
+  }
+}
+
+.mapWrapper {
+  flex: 1;
+  min-height: 500px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.1);
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.05);
+}
+
+.actionColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.quickActions, .helpdesk {
+  padding: 24px;
+
+  h2 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+}
+
+.btnGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.callBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+  text-decoration: none;
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--danger-color);
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  transition: all 0.3s ease;
+
+  span {
+    font-size: 0.9rem;
+    b { font-size: 1.5rem; display: block; margin-top: 4px; }
+  }
+
+  &:hover {
+    background: var(--danger-color);
+    color: white;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px -5px rgba(239, 68, 68, 0.3);
+  }
+}
+
+.policeBtn {
+  background: rgba(59, 130, 246, 0.1);
+  color: #2563eb;
+  border-color: rgba(59, 130, 246, 0.2);
+  &:hover { background: #2563eb; box-shadow: 0 10px 20px -5px rgba(59, 130, 246, 0.3); }
+}
+
+.generalBtn {
+  background: rgba(245, 158, 11, 0.1);
+  color: #d97706;
+  border-color: rgba(245, 158, 11, 0.2);
+  grid-column: 1 / -1;
+  &:hover { background: #f59e0b; box-shadow: 0 10px 20px -5px rgba(245, 158, 11, 0.3); }
+}
+
+.subtext {
+  color: var(--text-light);
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
