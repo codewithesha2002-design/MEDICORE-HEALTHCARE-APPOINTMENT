@@ -1,4 +1,6 @@
 <img width="1798" height="867" alt="image" src="https://github.com/user-attachments/assets/a62fba20-7ddc-4f1e-afbf-9d346a3cbd7b" />
+
+
 # 🏥 Medicore — Healthcare Appointment Platform
 
 ## Overview
@@ -7,7 +9,8 @@ Medicore is a full-stack healthcare platform built to streamline **doctor discov
 
 The system integrates secure authentication, role-based access control, multilingual support, and location-based emergency services within a modern, responsive interface.
 
----
+---<img width="1825" height="902" alt="image" src="https://github.com/user-attachments/assets/9328cae3-32ef-43f6-b125-b782237130c3" />
+
 
 ## Key Features
 
